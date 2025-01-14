@@ -16,6 +16,7 @@ django-phonenumber-field = "^8.0.0"
 django-phonenumbers = "^1.0.1"
 django-filter = "^24.3"
 ipython = "^8.31.0"
+djangorestframework-simplejwt = "^5.3.1"
 
 
 [tool.poetry.group.lint.dependencies]
