@@ -2,7 +2,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from lms.models import Lesson, Course
+from lms.models import Course, Lesson
 from users.models import User
 
 
@@ -78,7 +78,8 @@ class SubscriptionAPITestCase(APITestCase):
     def setUp(self):
         self.user = User.objects.create(email="test@test.ru")
         self.course = Course.objects.create(name="Course")
-        self.lesson = Lesson.objects.create(name="Lesson", video_link="https://www.youtube.com/lesson/", course=self.course)
+        self.lesson = Lesson.objects.create(name="Lesson", video_link="https://www.youtube.com/lesson/",
+                                            course=self.course)
         self.client.force_authenticate(user=self.user)
 
     def test_subscribe(self):

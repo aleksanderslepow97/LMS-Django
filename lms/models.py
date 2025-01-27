@@ -7,8 +7,8 @@ class Course(models.Model):
     name = models.CharField(max_length=100, verbose_name="Курс", help_text="Введите название курса")
     description = models.TextField(verbose_name="Описание курса", help_text="Введите описание курса", blank=True,
                                    null=True)
-    preview = models.ImageField(upload_to="media/img/", verbose_name="Превью курса", help_text="Загрузите превью курса",
-                                blank=True, null=True)
+    preview = models.ImageField(upload_to="media/img/", verbose_name="Превью курса",
+                                help_text="Загрузите превью курса", blank=True, null=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Владелец",
                               help_text="Выберите владельца курса", related_name="courses", null=True, blank=True)
 

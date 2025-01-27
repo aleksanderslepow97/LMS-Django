@@ -17,6 +17,13 @@ django-phonenumbers = "^1.0.1"
 django-filter = "^24.3"
 ipython = "^8.31.0"
 djangorestframework-simplejwt = "^5.3.1"
+drf-yasg = "^1.21.8"
+stripe = "^11.4.1"
+celery = "^5.4.0"
+eventlet = "^0.38.2"
+redis = "^5.2.1"
+django-celery-beat = "^2.7.0"
+pytz = "^2024.2"
 
 
 [tool.poetry.group.lint.dependencies]
@@ -24,6 +31,10 @@ flake8 = "^7.1.1"
 black = "^24.10.0"
 isort = "^5.13.2"
 mypy = "^1.14.0"
+
+
+[tool.poetry.group.test.dependencies]
+coverage = "^7.6.10"
 
 [build-system]
 requires = ["poetry-core"]

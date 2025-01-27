@@ -13,7 +13,6 @@ class LessonSerializer(serializers.ModelSerializer):
         fields = ["id", "name", "description", "video_link", "course"]
 
 
-
 class CourseSerializer(serializers.ModelSerializer):
     lessons_count = serializers.SerializerMethodField(read_only=True)
     lessons = LessonSerializer(many=True, read_only=True)
